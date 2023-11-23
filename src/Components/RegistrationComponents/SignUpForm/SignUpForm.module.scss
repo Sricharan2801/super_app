@@ -1,21 +1,155 @@
-
-@mixin displayForRow{
+@mixin displayForRow {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-@mixin displayForColoumn{
+@mixin displayForColoumn {
     @include displayForRow();
     flex-direction: column;
 }
 
-.main{
+@mixin color {
+    color: rgba(114, 219, 115, 1);
+}
+
+.main {
     width: 55vw;
     height: 100vh;
     @include displayForRow();
 
-    
-   
+    #registrationPageContents{
+        width: 70%;
+        height: 90%;
 
+        @include displayForColoumn();
+        justify-content: space-evenly;
+
+        #registrationPageTitle {
+            width: 100%;
+            height: 15%;
+            @include displayForColoumn();
+            justify-content: flex-end;
+
+
+
+            #appName {
+                color: white;
+                font-size: 3rem;
+                font-weight: 400;
+                font-family: single day;
+                @include color;
+            }
+
+            #createAccountMessage {
+                color: rgba(255, 255, 255, 1);
+                font-family: DM sans;
+                font-size: 1rem;
+                font-weight: 500;
+
+            }
+        }
+
+        #registartionForm {
+            width: 100%;
+            height: 60%;
+
+            form {
+                width: 100%;
+                height: 100%;
+                @include displayForColoumn();
+                justify-content: space-evenly;
+
+
+                .formFields {
+                    width: 70%;
+                    height: 10%;
+                    padding-left: 2%;
+                    font-size: 0.8rem;
+                    font-weight: 400;
+                    background-color: rgba(41, 41, 41, 1);
+                    color: rgba(124, 124, 124, 1);
+                    font-family: DM Sans;
+                    border: none;
+                    outline: none;
+                    border-radius: 5px;
+
+
+                }
+
+                #checkBoxContainer {
+                    width: 100%;
+                    height: 10%;
+                    @include displayForRow();
+                    gap: 2%;
+                    margin-right: 20%;
+
+                    #checkBox {
+                        width: 18px;
+                        height: 18px;
+                    }
+
+                    #checkBoxMessage {
+                        font-family: DM Sans;
+                        font-size: 0.7rem;
+                        color: rgba(124, 124, 124, 1);
+
+                    }
+
+                }
+
+                #signUpButton{
+                    width: 70%;
+                    height: 10%;
+                    background-color: rgba(114, 219, 115, 1);
+                    border: none;
+                    outline: none;
+                    border-radius: 28px;
+                    margin-top: 2%;
+                }
+
+                .warning {
+                    color: red;
+                    font-size: 0.7rem;
+                    margin-right: 53%;
+                    font-family: DM Sans;
+                }
+
+                #checkBoxWarning {
+                    margin-right: 30%;
+                }
+
+
+            }
+
+
+        }
+
+        #userInstructions{
+            width: 70%;
+            height: 20%;
+            
+            @include displayForColoumn();
+            justify-content: flex-start;
+            gap: 10%;
+            margin-top: 5%;
+          
+            .userInstructions{
+                color: rgba(124, 124, 124, 1);
+                font-family: Roboto;
+                font-size: 0.7em;
+                font-weight: 500;
+                line-height: 18px;
+                
+                span{
+                    @include color();
+                }
+                
+                
+            }
+            
+           
+            
+        }
+    }
 }
