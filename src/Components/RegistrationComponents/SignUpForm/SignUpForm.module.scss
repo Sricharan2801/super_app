@@ -1,0 +1,21 @@
+
+@mixin displayForRow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin displayForColoumn{
+    @include displayForRow();
+    flex-direction: column;
+}
+
+.main{
+    width: 55vw;
+    height: 100vh;
+    @include displayForRow();
+
+    
+   
+
+}

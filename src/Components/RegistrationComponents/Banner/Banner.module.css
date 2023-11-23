@@ -1,0 +1,16 @@
+#image{
+    width: 45vw;
+    height: 99vh;
+}
+
+#caption{
+    width: 40%;
+    color:rgba(255, 255, 255, 1);
+    position: absolute;
+    bottom: 60px;
+    left: 50px;
+    font-family: Roboto;
+    font-size: 2.2em;
+    font-weight: 900;
+
+}
