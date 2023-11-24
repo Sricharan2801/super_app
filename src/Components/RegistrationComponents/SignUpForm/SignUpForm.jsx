@@ -57,34 +57,34 @@ const SignUpForm = () => {
   const submitHanlder = (e) => {
     e.preventDefault();
 
-    let navigationToEntertiment = true;
+    let navigateToEntertiment = true;
 
     if (formData.name.trim().length <= 0) {
       setNameError(true);
-      navigationToEntertiment = false;
+      navigateToEntertiment = false;
     }
 
     if (formData.userName.trim().length <= 0) {
       setUserNameError(true);
-      navigationToEntertiment = false;
+      navigateToEntertiment = false;
     }
 
     if (formData.email.trim().length <= 0) {
       setEmailError(true);
-      navigationToEntertiment = false;
+      navigateToEntertiment = false;
     }
 
     if (formData.mobileNumber.trim().length <= 0) {
       setMobileNumberError(true);
-      navigationToEntertiment = false;
+      navigateToEntertiment = false;
     }
 
     if (!formData.isCheckboxChecked) {
       setCheckBoxError(true);
-      navigationToEntertiment = false;
+      navigateToEntertiment = false;
     }
 
-    if(navigationToEntertiment){
+    if(navigateToEntertiment){
       window.localStorage.setItem("userInfo",formData)
       navigate("/entertinement")
     }
