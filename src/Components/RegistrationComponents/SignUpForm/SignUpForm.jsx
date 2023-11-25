@@ -85,8 +85,12 @@ const SignUpForm = () => {
     }
 
     if (navigateToEntertiment) {
-      window.localStorage.setItem("userInfo", formData)
+      
       navigate("/entertinement")
+      localStorage.setItem("name",formData.name)
+      localStorage.setItem("userName",formData.userName)
+      localStorage.setItem("email",formData.email)
+      localStorage.setItem("mobileNumber",formData.mobileNumber)
     }
 
   }

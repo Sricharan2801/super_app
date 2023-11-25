@@ -1,0 +1,84 @@
+.main{
+    width: 80%;
+    height: 60%;
+    background-color:rgba(87, 70, 234, 1);
+    border-radius: 30px;
+    display: flex;
+
+    .leftSection{
+        width: 30%;
+        height: 100%;
+        // background-color: aliceblue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img{
+            width: 80%;
+            height: 90%;
+            padding-top: 5%;
+        }
+
+      
+    }
+
+    .rightSection{
+        width: 70%;
+        height: 100%;
+      
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+
+
+        .userInfoContainer{
+            width: 80%;
+            height: 30%;
+            
+
+            .userInfo{
+                font-family: Roboto;
+                color: rgba(255,255,255,1);
+
+            }
+
+            
+            #name{
+                font-size: 1.8vw;
+                font-weight: 400;
+            }
+
+            #email{
+                font-size: 1.8vw;
+                font-weight: 400;
+            }
+
+            #userName{
+                font-size: 3vw;
+                font-weight: 500;
+            }
+
+
+
+           
+        }
+
+        .userSelections{
+            width: 80%;
+            height: 50%;
+           
+
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: flex-start;
+        
+            gap: 2%;
+          
+           
+           
+        }
+    }
+    
+}
