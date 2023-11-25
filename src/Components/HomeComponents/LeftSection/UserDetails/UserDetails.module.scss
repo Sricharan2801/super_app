@@ -66,15 +66,18 @@
 
         .userSelections{
             width: 80%;
-            height: 50%;
-           
+            height: 40%;
+          
 
             display: flex;
             flex-wrap: wrap;
-            justify-content: flex-start;
-            align-items: flex-start;
-        
+            justify-content: center;
+            align-items: center;
+           
             gap: 2%;
+            overflow: auto;
+           
+        
           
            
            
