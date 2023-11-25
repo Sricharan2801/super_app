@@ -1,0 +1,23 @@
+.selection{
+    width: 30%;
+    height: 20%;
+    border-radius: 20px;
+    background-color:rgba(20, 138, 8, 1);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+    #userSelection{
+        color:rgba(255,255,255,1);
+        font-family: Roboto;
+        font-size: 1.2vw;
+        font-weight: 400;
+    }
+    #crossSymbol{
+        color: rgba(8, 92, 0, 1);
+        background-color:rgba(20, 138, 8, 1);
+        border-radius: 50%;
+        border: none;
+        font-size: 1.2vw;
+        margin-top: 2%;
+    }}

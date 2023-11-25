@@ -28,7 +28,7 @@ const SignUpForm = () => {
       }
     )
 
-    
+
     if (formData.name.trim().length > 0) {
       setNameError(false);
     }
@@ -45,12 +45,12 @@ const SignUpForm = () => {
       setMobileNumberError(false)
     }
 
-    if(e.target.name=== "isCheckboxChecked"){
+    if (e.target.name === "isCheckboxChecked") {
       setCheckBoxError(false)
     }
-    
-    
-   
+
+
+
 
   }
 
@@ -84,96 +84,89 @@ const SignUpForm = () => {
       navigateToEntertiment = false;
     }
 
-    if(navigateToEntertiment){
-      window.localStorage.setItem("userInfo",formData)
+    if (navigateToEntertiment) {
+      window.localStorage.setItem("userInfo", formData)
       navigate("/entertinement")
     }
-
-
 
   }
 
 
+  return (
+    <div className={styles.main}>
 
+      <div id={styles.registrationPageContents}>
 
-return (
-  <div className={styles.main}>
+        <div id={styles.registrationPageTitle}>
+          <p id={styles.appName}>Super app</p>
+          <p id={styles.createAccountMessage}>Create your new account</p>
+        </div>
 
-    <div id={styles.registrationPageContents}>
+        <div id={styles.registartionForm}>
 
-      <div id={styles.registrationPageTitle}>
-        <p id={styles.appName}>Super app</p>
-        <p id={styles.createAccountMessage}>Create your new account</p>
-      </div>
+          <form action="" onSubmit={(e) => submitHanlder(e)} >
+            <input className={styles.formFields}
+              type="text"
+              placeholder='Name'
+              name='name'
+              onChange={(e) => changeHandler(e)}
+            />
+            {
+              nameError ? <p className={styles.warning}>Field is Required</p> : <></>
+            }
 
-      <div id={styles.registartionForm}>
-
-        <form action="" onSubmit={(e) => submitHanlder(e)} >
-          <input className={styles.formFields}
-            type="text"
-            placeholder='Name'
-            name='name'
-            onChange={(e) => changeHandler(e)}
-          />
-          {
-            nameError ? <p className={styles.warning}>Field is Required</p> : <></>
-          }
-
-          <input className={styles.formFields}
-            type="text"
-            placeholder='UserName'
-            name='userName'
-            onChange={(e) => changeHandler(e)} />
-          {
-            userNameError ? <p className={styles.warning}>Field is Required</p> : <></>
-          }
-
-          <input className={styles.formFields}
-            type="email"
-            placeholder='Email'
-            name='email'
-            onChange={(e) => changeHandler(e)} />
-          {
-            emailError ? <p className={styles.warning}>Field is Required</p> : <></>
-          }
-
-          <input className={styles.formFields}
-            type="tel"
-            placeholder='Mobile'
-            name='mobileNumber'
-            onChange={(e) => changeHandler(e)} />
-          {
-            mobileNumberError ? <p className={styles.warning}>Field is Required</p> : <></>
-          }
-
-          <div id={styles.checkBoxContainer}>
-            <input id='checkBox' type="checkbox" name='isCheckboxChecked'
+            <input className={styles.formFields}
+              type="text"
+              placeholder='UserName'
+              name='userName'
               onChange={(e) => changeHandler(e)} />
-            <p id={styles.checkBoxMessage}>Share my registration data with Superapp</p>
-          </div>
-          {
-            checkBoxError?
-            <p id={styles.checkBoxWarning} 
-            className={styles.warning}>Check this box if you want to proceed</p>:<></>
-          }
+            {
+              userNameError ? <p className={styles.warning}>Field is Required</p> : <></>
+            }
 
+            <input className={styles.formFields}
+              type="email"
+              placeholder='Email'
+              name='email'
+              onChange={(e) => changeHandler(e)} />
+            {
+              emailError ? <p className={styles.warning}>Field is Required</p> : <></>
+            }
 
+            <input className={styles.formFields}
+              type="tel"
+              placeholder='Mobile'
+              name='mobileNumber'
+              onChange={(e) => changeHandler(e)} />
+            {
+              mobileNumberError ? <p className={styles.warning}>Field is Required</p> : <></>
+            }
 
+            <div id={styles.checkBoxContainer}>
+              <input id='checkBox' type="checkbox" name='isCheckboxChecked'
+                onChange={(e) => changeHandler(e)} />
+              <p id={styles.checkBoxMessage}>Share my registration data with Superapp</p>
+            </div>
+            {
+              checkBoxError ?
+                <p id={styles.checkBoxWarning}
+                  className={styles.warning}>Check this box if you want to proceed</p> : <></>
+            }
 
-          <button id={styles.signUpButton}>SIGN UP</button>
-        </form>
+            <button id={styles.signUpButton}>SIGN UP</button>
+          </form>
 
-      </div>
+        </div>
 
-      <div id={styles.userInstructions}>
-        <p className={styles.userInstructions}>By clicking on Sign up. you agree to Superapp <span>Terms and Conditions of Use</span></p>
-        <p className={styles.userInstructions}>To learn more about how Superapp collects, uses, shares and protects your personal data please head Superapp <span>Privacy Policy</span></p>
+        <div id={styles.userInstructions}>
+          <p className={styles.userInstructions}>By clicking on Sign up. you agree to Superapp <span>Terms and Conditions of Use</span></p>
+          <p className={styles.userInstructions}>To learn more about how Superapp collects, uses, shares and protects your personal data please head Superapp <span>Privacy Policy</span></p>
+        </div>
+
       </div>
 
     </div>
-
-  </div>
-)
-        }
+  )
+}
 
 export default SignUpForm
