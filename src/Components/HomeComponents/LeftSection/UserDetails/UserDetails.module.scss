@@ -1,6 +1,6 @@
 .main{
     width: 80%;
-    height: 60%;
+    height: 50%;
     background-color:rgba(87, 70, 234, 1);
     border-radius: 30px;
     display: flex;
@@ -30,6 +30,7 @@
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
+        gap: 10%;
 
 
         .userInfoContainer{
