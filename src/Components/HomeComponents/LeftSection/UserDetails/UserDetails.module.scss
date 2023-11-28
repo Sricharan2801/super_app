@@ -1,9 +1,10 @@
 .main{
-    width: 80%;
+    width: 90%;
     height: 50%;
     background-color:rgba(87, 70, 234, 1);
     border-radius: 30px;
     display: flex;
+    margin-left: 5%;
 
     .leftSection{
         width: 30%;
@@ -18,8 +19,6 @@
             height: 90%;
             padding-top: 5%;
         }
-
-      
     }
 
     .rightSection{
@@ -46,17 +45,17 @@
 
             
             #name{
-                font-size: 1.8vw;
+                font-size: 1rem;
                 font-weight: 400;
             }
 
             #email{
-                font-size: 1.8vw;
+                font-size: 1rem;
                 font-weight: 400;
             }
 
             #userName{
-                font-size: 3vw;
+                font-size: 1.8rem;
                 font-weight: 500;
             }
 

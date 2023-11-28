@@ -38,11 +38,11 @@ const RightSection = () => {
 
         <div className={styles.contentBox}>
           <p className={styles.content}>
-            {/* Displaying author of the first article */}
             {articleDescription}
           </p>
         </div>
       </div>
+      <button className={styles.browseButton}>Browse</button>
     </div>
   );
 };

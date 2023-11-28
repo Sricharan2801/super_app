@@ -2,8 +2,11 @@ import React, { useState, useEffect } from 'react'
 import styles from "./EntertinementComponents.module.scss"
 import MovieCard from './MovieCard'
 import UserChoice from './UserChoice'
+import { useNavigate } from 'react-router-dom'
 
 const EntertinementComponents = () => {
+    const navigate = useNavigate()
+
     let cards = [
         { id: 0, color: "rgba(255, 82, 9, 1)", genres: "Action", image: "./src/Components/EntertinementComponents/Images/actionImage.png" },
         { id: 1, color: "rgba(215, 164, 255, 1)", genres: "Drama", image: "./src/Components/EntertinementComponents/Images/dramaImage.png" },
@@ -36,6 +39,7 @@ const EntertinementComponents = () => {
         }
 
         localStorage.setItem("userPreferences",userChoice)
+        navigate("/Home")
     }
 
     useEffect(() => {

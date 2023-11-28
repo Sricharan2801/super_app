@@ -4,12 +4,13 @@
 }
 
 .main {
-    width: 80%;
-    height: 35%;
+    width: 90%;
+    height: 40%;
     background-color: aqua;
     border-radius: 30px;
     display: flex;
     flex-direction: column;
+    margin-left: 5%;
 
 
     .top {
@@ -24,14 +25,14 @@
         .date {
             color: white;
             font-family: Roboto;
-            font-size: 2vw;
+            font-size: 1vw;
             font-weight: 600;
         }
 
         .time {
             color: white;
             font-family: Roboto;
-            font-size: 2vw;
+            font-size: 1vw;
             font-weight: 600;
         }
     }
@@ -62,15 +63,16 @@
             margin-top: 2%;
             @include display;
             flex-direction: column;
-            gap: 5%;
+            
+            gap: 8%;
 
             #weatherImage {
-                width: 40%;
-                height: 60%
+                width: 30%;
+                height: 50%
             }
 
             #weatherText {
-                font-size: 1.4vw;
+                font-size: 0.8rem;
                 font-weight: 400;
             }
         }
@@ -81,23 +83,23 @@
             justify-content: space-evenly;
 
             #currentTemperature {
-                font-size: 4vw;
+                font-size: 1.5vw;
                 font-weight: 400;
             }
 
             .pressureDetails {
                 margin-left: 8%;
-                width: 60%;
+                width: 80%;
                 @include display;
                 gap: 10%;
 
                 #pressureImage {
                     width: 20%;
-                    height: 80%;
+                    height: 60%;
                 }
 
                 #pressure {
-                    font-size: 1.5vw;
+                    font-size: 0.8rem;
                 }
             }
 
@@ -110,7 +112,7 @@
 
             .windDetails {
                 margin-left: 8%;
-                width: 60%;
+                width: 80%;
                 display: flex;
                 align-items: center;
                 gap: 5%;
@@ -121,14 +123,14 @@
                 }
 
                 #wind {
-                    font-size: 1.5vw;
+                    font-size: 0.8rem;
                 }
             }
 
 
             .humidityDetails {
                 margin-left: 8%;
-                width: 60%;
+                width: 80%;
                 @include display;
                 gap: 10%;
 
@@ -138,7 +140,7 @@
                 }
 
                 #humidity {
-                    font-size: 1.5vw;
+                    font-size: 0.8rem;
                 }
             }
         }
