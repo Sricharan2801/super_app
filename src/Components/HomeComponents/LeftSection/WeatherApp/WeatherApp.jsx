@@ -1,48 +1,42 @@
 import React, { useEffect, useState } from 'react'
 import styles from "./WeatherApp.module.scss"
-import axios from 'axios'
+// import axios from 'axios'
+import FormattedDate from '../../../../Utils/Date'
+import FormattedTime from '../../../../Utils/Time'
+import getWeatherDetails from '../../../../API/Weather'
 
 const WheatherApp = () => {
 
   const [weatherData, setWeatherData] = useState()
-
-  // code to fetch current date from date object
-  const time = new Date().toLocaleString("en-US",
-    {
-      timeZone: "Asia/Kolkata",
-      timeStyle: "short"
-    })
-
-  // code to fetch current time
-  const date = new Date().toLocaleDateString("en-US", { timeZone: "Asia/Kolkata" }).replace(/\//g, '-');
-
-
-
-  // Fetches Data from weather api
+  
   useEffect(() => {
-    const apiUrl = "https://api.weatherapi.com/v1/current.json";
-    axios.get(apiUrl, {
-      params: {
-        key: "334d9d438fec4f759fb70050232711",
-        q: "Hyderabad, India",
-      }
-    }).then(responce => setWeatherData(responce.data))
-      .catch(error => console.log("SomeThing Went Wrong...", error))
-  }, [])
 
+    const fetchWeatherDetails = async () => {
+      try {
+        const responce = await getWeatherDetails()
+        setWeatherData(responce.data)
+      } catch (error) {
+        console.log(error);
+      }
+    }
+
+    fetchWeatherDetails();
+  }, [])
 
   if (!weatherData) {
     // Data is still being fetched, or an error occurred
     return <div>Loading...</div>;
   }
 
+
+
   return (
     <div className={styles.main}>
 
       {/* top contains date and time */}
       <div className={styles.top}>
-        <p className={styles.date}>{date}</p>
-        <p className={styles.time}>{time}</p>
+        <p className={styles.date}>{FormattedDate()}</p>
+        <p className={styles.time}>{FormattedTime()}</p>
       </div>
 
       {/* bottom contains entire weatherReport */}

@@ -45,12 +45,10 @@ const SignUpForm = () => {
       setMobileNumberError(false)
     }
 
+  
     if (e.target.name === "isCheckboxChecked") {
       setCheckBoxError(false)
     }
-
-
-
 
   }
 
@@ -74,7 +72,7 @@ const SignUpForm = () => {
       navigateToEntertiment = false;
     }
 
-    if (formData.mobileNumber.trim().length <= 0) {
+    if (formData.mobileNumber.trim().length <= 10) {
       setMobileNumberError(true);
       navigateToEntertiment = false;
     }
@@ -137,13 +135,15 @@ const SignUpForm = () => {
               emailError ? <p className={styles.warning}>Field is Required</p> : <></>
             }
 
-            <input className={styles.formFields}
-              type="tel"
+            <input id={styles.mobileNumber} className={styles.formFields}
+               type="number"
+               inputMode='numeric'
+               pattern='[0-9]' 
               placeholder='Mobile'
               name='mobileNumber'
               onChange={(e) => changeHandler(e)} />
             {
-              mobileNumberError ? <p className={styles.warning}>Field is Required</p> : <></>
+              mobileNumberError ? <p id={styles.mobileNumberWarning} className={styles.warning}>Enter Proper Mobile Number</p> : <></>
             }
 
             <div id={styles.checkBoxContainer}>

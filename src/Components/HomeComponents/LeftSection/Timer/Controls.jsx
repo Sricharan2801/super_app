@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from "./Controls.module.scss"
 
+
 const Controls = ({onIncrement,value,onDecrement}) => {
     return (
         <div className={styles.timerControls}>
@@ -14,8 +15,6 @@ const Controls = ({onIncrement,value,onDecrement}) => {
             <div className={styles.arrow} onClick={onDecrement}>
              
             </div>
-
-            
 
         </div>
     )

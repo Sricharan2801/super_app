@@ -22,17 +22,12 @@ const UserDetails = () => {
 
   const PreviousUserSelections = userPreferences.split(",")
 
-
-
-
-
-
   return (
     <div className={styles.main}>
 
       <div className={styles.leftSection}>
 
-        <img src="./src/Components/HomeComponents/LeftSection/UserDetails/homePageImage.png" alt="" />
+        <img src="./src/Assets/userProfile.png" alt="" />
 
 
       </div>

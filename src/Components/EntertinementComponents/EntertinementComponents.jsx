@@ -4,19 +4,20 @@ import MovieCard from './MovieCard'
 import UserChoice from './UserChoice'
 import { useNavigate } from 'react-router-dom'
 
+
 const EntertinementComponents = () => {
     const navigate = useNavigate()
 
     let cards = [
-        { id: 0, color: "rgba(255, 82, 9, 1)", genres: "Action", image: "./src/Components/EntertinementComponents/Images/actionImage.png" },
-        { id: 1, color: "rgba(215, 164, 255, 1)", genres: "Drama", image: "./src/Components/EntertinementComponents/Images/dramaImage.png" },
-        { id: 2, color: "rgba(20, 138, 8, 1)", genres: "Romance", image: "./src/Components/EntertinementComponents/Images/romance.png" },
-        { id: 3, color: "rgba(132, 194, 255, 1)", genres: "Thriller", image: "./src/Components/EntertinementComponents/Images/thriller.png" },
-        { id: 4, color: "rgba(144, 37, 0, 1)", genres: "Western", image: "./src/Components/EntertinementComponents/Images/western.png" },
-        { id: 5, color: "rgba(115, 88, 255, 1)", genres: "Horror", image: "./src/Components/EntertinementComponents/Images/horrer.png" },
-        { id: 6, color: "rgba(255, 82, 9, 1)", genres: "Fantasy", image: "./src/Components/EntertinementComponents/Images/fantacy.png" },
-        { id: 7, color: "rgba(255, 74, 222, 1)", genres: "Music", image: "./src/Components/EntertinementComponents/Images/music.png" },
-        { id: 8, color: "rgba(108, 208, 97, 1)", genres: "Fiction", image: "./src/Components/EntertinementComponents/Images/fiction.png" }
+        { id: 0, color: "rgba(255, 82, 9, 1)", genres: "Action", image: "./src/Assets/actionImage.png" },
+        { id: 1, color: "rgba(215, 164, 255, 1)", genres: "Drama", image: "./src/Assets/dramaImage.png" },
+        { id: 2, color: "rgba(20, 138, 8, 1)", genres: "Romance", image: "./src/Assets/romance.png" },
+        { id: 3, color: "rgba(132, 194, 255, 1)", genres: "Thriller", image: "./src/Assets/thriller.png" },
+        { id: 4, color: "rgba(144, 37, 0, 1)", genres: "Western", image: "./src/Assets/western.png" },
+        { id: 5, color: "rgba(115, 88, 255, 1)", genres: "Horror", image: "./src/Assets/horrer.png" },
+        { id: 6, color: "rgba(255, 82, 9, 1)", genres: "Fantasy", image: "./src/Assets/fantacy.png" },
+        { id: 7, color: "rgba(255, 74, 222, 1)", genres: "Music", image: "./src/Assets/music.png" },
+        { id: 8, color: "rgba(108, 208, 97, 1)", genres: "Fiction", image: "./src/Assets/fiction.png" }
 
     ]
 

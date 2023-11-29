@@ -78,7 +78,9 @@ const Timer = () => {
     };
 
 
-
+   const doubleDigitSeconds = String(seconds).padStart(2,"0");
+   const doubleDigitMinutes = String(minutes).padStart(2,"0");
+   const doubleDigitHours = String(hours).padStart(2,"0")
 
     return (
         <div className={styles.main}>
@@ -95,21 +97,21 @@ const Timer = () => {
                     
                     <div className={styles.setTime}>
                         <p className={styles.units}>Hours</p>
-                        <Controls value={hours} onIncrement={() => increment("hour")} onDecrement={() => decrement("hour")} />
+                        <Controls value={doubleDigitHours} onIncrement={() => increment("hour")} onDecrement={() => decrement("hour")} />
                     </div>
 
                     <p className={styles.seperator}>:</p>
 
                     <div className={styles.setTime}>
                         <p className={styles.units}>Minutes</p>
-                        <Controls value={minutes} onIncrement={() => increment("min")} onDecrement={() => decrement("min")} />
+                        <Controls value={doubleDigitMinutes} onIncrement={() => increment("min")} onDecrement={() => decrement("min")} />
                     </div>
 
                     <p className={styles.seperator}>:</p>
 
                     <div className={styles.setTime}>
                         <p className={styles.units}>Seconds</p>
-                        <Controls value={seconds} onIncrement={() => increment("sec")} onDecrement={() => decrement("sec")} />
+                        <Controls value={doubleDigitSeconds} onIncrement={() => increment("sec")} onDecrement={() => decrement("sec")} />
                     </div>
 
                 </div>

@@ -5,7 +5,6 @@ const CountDownTimer = ({ duration, isRunning, onComplete }) => {
   const [remainingTime, setRemainingTime] = useState(duration);
 
   useEffect(() => {
-    console.log('Setting remaining time:', duration);
     setRemainingTime(duration);
   }, [duration]);
 
@@ -14,16 +13,14 @@ const CountDownTimer = ({ duration, isRunning, onComplete }) => {
     let minutes = Math.floor((remainingTime % 3600) / 60);
     let seconds = remainingTime % 60;
 
-    if (duration === 0) {
-      hours = 0;
-      minutes = 0;
-      seconds = 0;
-    }
+    const doubleDigitSeconds = String(seconds).padStart(2, "0");
+    const doubleDigitMinutes = String(minutes).padStart(2, "0");
+    const doubleDigitHours = String(hours).padStart(2, "0")
 
     return (
       <div className="timer">
         <div style={{ color: 'white', fontFamily: 'Roboto', fontSize: '2rem' }}>
-          {hours}:{minutes}:{seconds}
+          {doubleDigitHours}:{doubleDigitMinutes}:{doubleDigitSeconds}
         </div>
       </div>
     );
