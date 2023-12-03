@@ -67,21 +67,22 @@
         .userSelections{
             width: 80%;
             height: 40%;
-          
-
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
-           
             gap: 2%;
             overflow: auto;
-           
-        
-          
-           
-           
         }
     }
     
+}
+
+.userSelections::-webkit-scrollbar{
+    width: 10px;
+}
+
+.userSelections::-webkit-scrollbar-thumb{
+    background-color:  rgba(159, 148, 255, 1);
+    border-radius: 10px;
 }

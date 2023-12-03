@@ -72,7 +72,7 @@ const SignUpForm = () => {
       navigateToEntertiment = false;
     }
 
-    if (formData.mobileNumber.trim().length <= 10) {
+    if (formData.mobileNumber.trim().length < 10) {
       setMobileNumberError(true);
       navigateToEntertiment = false;
     }

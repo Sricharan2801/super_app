@@ -3,10 +3,12 @@ import styles from "./RightSection.module.scss";
 import getNewsDetails from '../../../API/News';
 import FormattedDate from '../../../Utils/Date';
 import FormattedTime from '../../../Utils/Time';
+import { useNavigate } from 'react-router-dom';
 
 
 const RightSection = () => {
   const [data, setData] = useState([]);
+  const navigate = useNavigate()
 
   useEffect(() => {
     const newsDetails = async () => {
@@ -21,6 +23,9 @@ const RightSection = () => {
     newsDetails()
   }, [])
 
+  const clickHandler = ()=>{
+      navigate("/browse")
+  }
 
 
   
@@ -49,7 +54,7 @@ const RightSection = () => {
           </p>
         </div>
       </div>
-      <button className={styles.browseButton}>Browse</button>
+      <button className={styles.browseButton} onClick={()=> clickHandler()}>Browse</button>
     </div>
   );
 };
