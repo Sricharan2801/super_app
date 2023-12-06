@@ -28,7 +28,7 @@ const Timer = () => {
 
     const handleComplete = () => {
         setIsRunning(false)
-        new Audio("./src/Assets/countDown.wav").play()
+        new Audio(countDown).play()
         setHours(0);
         setMinutes(0);
         setSeconds(0);
