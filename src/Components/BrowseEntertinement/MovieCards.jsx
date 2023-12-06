@@ -9,7 +9,7 @@ const MovieCards = ({ genre }) => {
   useEffect(() => {
     const fetchMovies = async () => {
       try {
-        const genreId = getGenreIdWithName(genre); // Implement logic to get genre ID by name
+        const genreId = getGenreIdWithName(genre);
         const movieDetails = await getMovieDetails(genreId);
         setMovies(movieDetails);
       } catch (error) {
@@ -21,7 +21,7 @@ const MovieCards = ({ genre }) => {
   }, [genre]);
 
   const getGenreIdWithName = (name) => {
-    
+
     const genreIdNumber = {
       action: 28,
       drama: 18,
@@ -34,10 +34,10 @@ const MovieCards = ({ genre }) => {
       fiction: 878,
     };
 
-    return genreIdNumber[name.toLowerCase()] || 0; // Return 0 if genre not found
+    return genreIdNumber[name.toLowerCase()] || 0;
   };
 
-  
+
 
   return (
     <div className={styles.main}>
@@ -50,12 +50,12 @@ const MovieCards = ({ genre }) => {
             src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
             alt={movie.title}
           />
-          
+
         ))}
       </div>
-      
+
     </div>
-     
+
   );
 };
 

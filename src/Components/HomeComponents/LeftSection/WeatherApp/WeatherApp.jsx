@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import styles from "./WeatherApp.module.scss"
-// import axios from 'axios'
 import FormattedDate from '../../../../Utils/Date'
 import FormattedTime from '../../../../Utils/Time'
 import getWeatherDetails from '../../../../API/Weather'
+import pressureGuage from "../../../../Assets/Images/pressureGuage.png"
+import windImage from "../../../../Assets/Images/windImage.png"
+import HumidityImage from "../../../../Assets/Images/HumidityImage.png"
 
 const WheatherApp = () => {
 
@@ -59,7 +61,7 @@ const WheatherApp = () => {
 
           <div className={styles.pressureDetails}>
 
-            <img id={styles.pressureImage} src="./src/Components/HomeComponents/LeftSection/WeatherApp/pressureGuage.png" alt="" />
+            <img id={styles.pressureImage} src={pressureGuage} alt="pressureGuageImage" />
             <p id={styles.pressure}>{weatherData.current.pressure_mb} mBar &nbsp;Pressure</p>
 
           </div>
@@ -72,14 +74,14 @@ const WheatherApp = () => {
 
           <div className={styles.windDetails}>
 
-            <img id={styles.windImage} src="./src/Components/HomeComponents/LeftSection/WeatherApp/windImage.png" alt="" />
+            <img id={styles.windImage} src={windImage} alt="" />
             <p id={styles.wind}>{weatherData.current.wind_kph} Km/h Wind</p>
 
           </div>
 
           <div className={styles.humidityDetails}>
 
-            <img id={styles.humidityImage} src="./src/Components/HomeComponents/LeftSection/WeatherApp/HumidityImage.png" alt="" />
+            <img id={styles.humidityImage} src={HumidityImage} alt="" />
             <p id={styles.humidity}>{weatherData.current.humidity} % Humidity</p>
 
           </div>

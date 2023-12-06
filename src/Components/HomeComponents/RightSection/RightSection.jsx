@@ -32,7 +32,7 @@ const RightSection = () => {
   
   const randomNumber = data.length>0 ? Math.floor(Math.random() * data.length) : 1;
   const articleDescription = data.length > 0 ? data[randomNumber].description : '';
-  const articleImage = data.length > 0 ? data[randomNumber].urlToImage : '';
+  const articleImage = data.length > 0 ? data[randomNumber].image : '';
   const articleTitle = data.length > 0 ? data[randomNumber].title : '';
 
   

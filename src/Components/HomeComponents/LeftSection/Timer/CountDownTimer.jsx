@@ -34,9 +34,8 @@ const CountDownTimer = ({ duration, isRunning, onComplete }) => {
         duration={duration}
         colors={['rgba(255, 106, 106, 1)']}
         onComplete={() => {
-          console.log('Countdown completed. Calling onComplete and resetting remaining time.');
           onComplete();
-          setRemainingTime(duration); // Reset remaining time after completion
+          setRemainingTime(duration); 
         }}
       >
         {renderTime}

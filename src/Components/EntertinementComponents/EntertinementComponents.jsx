@@ -3,21 +3,31 @@ import styles from "./EntertinementComponents.module.scss"
 import MovieCard from './MovieCard'
 import UserChoice from './UserChoice'
 import { useNavigate } from 'react-router-dom'
+import actionImage from "../../Assets/Images/actionImage.png"
+import dramaImage from "../../Assets/Images/dramaImage.png"
+import romance from "../../Assets/Images/romance.png"
+import thriller from "../../Assets/Images/thriller.png"
+import western from "../../Assets/Images/western.png"
+import horrer from "../../Assets/Images/horrer.png"
+import fantacy from "../../Assets/Images/fantacy.png"
+import music from "../../Assets/Images/music.png"
+import fiction from "../../Assets/Images/fiction.png"
+import Vector from "../../Assets/Images/Vector.png"
 
 
 const EntertinementComponents = () => {
     const navigate = useNavigate()
 
     let cards = [
-        { id: 0, color: "rgba(255, 82, 9, 1)", genres: "Action", image: "./src/Assets/actionImage.png" },
-        { id: 1, color: "rgba(215, 164, 255, 1)", genres: "Drama", image: "./src/Assets/dramaImage.png" },
-        { id: 2, color: "rgba(20, 138, 8, 1)", genres: "Romance", image: "./src/Assets/romance.png" },
-        { id: 3, color: "rgba(132, 194, 255, 1)", genres: "Thriller", image: "./src/Assets/thriller.png" },
-        { id: 4, color: "rgba(144, 37, 0, 1)", genres: "Western", image: "./src/Assets/western.png" },
-        { id: 5, color: "rgba(115, 88, 255, 1)", genres: "Horror", image: "./src/Assets/horrer.png" },
-        { id: 6, color: "rgba(255, 82, 9, 1)", genres: "Fantasy", image: "./src/Assets/fantacy.png" },
-        { id: 7, color: "rgba(255, 74, 222, 1)", genres: "Music", image: "./src/Assets/music.png" },
-        { id: 8, color: "rgba(108, 208, 97, 1)", genres: "Fiction", image: "./src/Assets/fiction.png" }
+        { id: 0, color: "rgba(255, 82, 9, 1)", genres: "Action", image: actionImage },
+        { id: 1, color: "rgba(215, 164, 255, 1)", genres: "Drama", image: dramaImage },
+        { id: 2, color: "rgba(20, 138, 8, 1)", genres: "Romance", image: romance },
+        { id: 3, color: "rgba(132, 194, 255, 1)", genres: "Thriller", image: thriller },
+        { id: 4, color: "rgba(144, 37, 0, 1)", genres: "Western", image: western },
+        { id: 5, color: "rgba(115, 88, 255, 1)", genres: "Horror", image: horrer },
+        { id: 6, color: "rgba(255, 82, 9, 1)", genres: "Fantasy", image: fantacy },
+        { id: 7, color: "rgba(255, 74, 222, 1)", genres: "Music", image: music },
+        { id: 8, color: "rgba(108, 208, 97, 1)", genres: "Fiction", image: fiction }
 
     ]
 
@@ -39,8 +49,12 @@ const EntertinementComponents = () => {
             setError(true)
         }
 
-        localStorage.setItem("userPreferences",userChoice)
-        navigate("/Home")
+        if (userChoice.length >= 3) {
+            navigate("/Home")
+        }
+
+        localStorage.setItem("userPreferences", userChoice)
+
     }
 
     useEffect(() => {
@@ -48,7 +62,6 @@ const EntertinementComponents = () => {
             setError(false)
         }
     }, [userChoice])
-
 
 
     return (
@@ -81,7 +94,7 @@ const EntertinementComponents = () => {
                         {
                             error ?
                                 <div className={styles.warningContainer} >
-                                    <img src="./src/Components/EntertinementComponents/Images/Vector.png" alt="" />
+                                    <img src={Vector} alt="" />
                                     <p className={styles.warning}>Minimum 3 category required</p>
                                 </div>
                                 : ""

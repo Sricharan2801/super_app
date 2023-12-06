@@ -3,6 +3,7 @@ import React from 'react';
 import styles from './Browse.module.scss';
 import { useNavigate } from 'react-router-dom';
 import MovieCards from './MovieCards';
+import profile from "../../Assets/Images/profile.png"
 
 const Browse = () => {
   const navigate = useNavigate();
@@ -19,7 +20,7 @@ const Browse = () => {
         <p className={styles.appName}>Super app</p>
         <img
           className={styles.profile}
-          src="./src/Assets/profile.png"
+          src={profile}
           alt="Profile"
           onClick={() => clickHandler()}
         />

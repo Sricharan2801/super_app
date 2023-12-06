@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import styles from "./UserDetails.module.scss"
 import PreviousSelection from './PreviousSelection'
+import userProfile from "../../../../Assets/Images/userProfile.png"
 
 const UserDetails = () => {
 
@@ -27,7 +28,7 @@ const UserDetails = () => {
 
       <div className={styles.leftSection}>
 
-        <img src="./src/Assets/userProfile.png" alt="" />
+        <img src={userProfile} alt="userProfile" />
 
 
       </div>

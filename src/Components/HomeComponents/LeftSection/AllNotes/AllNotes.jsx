@@ -7,7 +7,6 @@ const AllNotes = () => {
 
   const changeHandler = (e)=>{
     setText(e.target.value)
-      
   }
   
   localStorage.setItem("textInput",text)

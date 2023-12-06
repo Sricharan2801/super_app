@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import styles from "./Timer.module.scss"
 import CountDownTimer from './CountDownTimer';
 import Controls from './Controls';
+import countDown from "../../../../Assets/countDown.wav"
 
 
 const Timer = () => {
@@ -22,7 +23,7 @@ const Timer = () => {
         setMinutes(0);
         setSeconds(0);
 
-        new Audio("./src/Assets/countDown.wav").play()
+        new Audio(countDown).play()
     };
 
     const handleComplete = () => {
@@ -31,8 +32,6 @@ const Timer = () => {
         setHours(0);
         setMinutes(0);
         setSeconds(0);
-
-
     };
 
     const increment = (unit) => {
